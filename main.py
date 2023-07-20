@@ -19,8 +19,31 @@ while num_index<len(lista_nums):
 print(num_sum)
 
 #zadania
-tel_num=input("Podaj swój numer telefonu")
-tel_num=tel_num.replace("-","").replace(" ","")
-formatted_celli=""
-index_celli=0
-while index_celli
+
+#bardzo spoko zadanie jestem dumny ze je zrobiłem
+
+#tel_num=input("Podaj swój numer telefonu")
+#tel_num=tel_num.replace("-","").replace(" ","")
+#formatted_celli=""
+#index_celli=0
+#while index_celli<len(tel_num):
+#    if index_celli % 3==0 and index_celli!=0:
+#        formatted_celli+=" "
+#        formatted_celli += tel_num[index_celli]
+#        index_celli+=1
+#    else:
+#        formatted_celli+=tel_num[index_celli]
+#        index_celli+=1
+#
+#print(formatted_celli)
+
+num=0
+proby=0
+while num % 2!=0 and proby<10 or num == 0 and proby<10:
+    proby += 1
+    num = int(input("Podaj liczbe parzysta wiekszą od 0. masz 10 prób"))
+if(proby<10):
+    print("udało ci sie")
+else:
+    print(" r y searius?")
+
