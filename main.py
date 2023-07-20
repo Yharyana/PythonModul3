@@ -115,8 +115,47 @@
 #print(formatted_celli)
 
 
+# zebyb wypisowało tylko
+#wydatki={}
+#x=True#
+#
+#while x==True:
+#    y=True#
+#
+#    kategoria=input("podaj kategorie lub  napisz X by wyjść")
+#    if kategoria=="X":
+#        x=False
+#    else:
+#        wydatki[kategoria]=[]
+#        while y==True:
+#            cena=input("opodaj ilosc jakie wydałes na owy wydatek albo nacisj Y by zakonaczy program")
+#            if cena=="Y":
+#                y=False
+#            else:
+#                cena=int(cena)
+#                wydatki[kategoria].append(f"{cena} ")
+#
+#print(wydatki)
+wydatki={}
+x=True#
 
+while x==True:
+    y=True
 
-
-
-
+    kategoria=input("podaj kategorie lub  napisz X by wyjść")
+    if kategoria=="X":
+        x=False
+    else:
+        wydatki[kategoria]=[]
+        while y==True:
+            cena=input("opodaj ilosc jakie wydałes na owy wydatek albo nacisj Y by zakonaczy program")
+            if cena=="Y":
+                y=False
+            else:
+                cena=int(cena)
+                wydatki[kategoria].append(cena)
+srednia=0
+total=0;
+for j in wydatki.values():
+    total+=sum(j)
+print(total)
