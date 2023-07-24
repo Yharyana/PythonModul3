@@ -142,43 +142,81 @@
 
 
 #ważne zadanie do zrozumienia
-wydatki={}
-wydatki_total=0
-wydatki_total_sposob=0
-x=True
+#wydatki={}
+#wydatki_total=0
+#wydatki_total_sposob=0
+#x=True
 
-while x==True:
-    y=True
+#while x==True:
+ #   y=True
 
-    kategoria=input("podaj kategorie lub  napisz X by wyjść")
-    if kategoria=="X":
-        x=False
-    else:
-        wydatki[kategoria]=[]
-        while y==True:
-            cena=input("opodaj ilosc jakie wydałes na owy wydatek albo nacisj Y by zakonaczy program")
-            if cena=="Y":
-                y=False
-            else:
-                cena=float(cena)
-                wydatki_total+=cena
-                wydatki[kategoria].append(cena)
-for i in wydatki.values():
-    wydatki_total_sposob+=sum(i)
-print(wydatki_total_sposob)
-print(wydatki_total)
-procenty={}
-for z,r in wydatki.items():
-    katname=z
-    total_w_lista=sum(r)
-    procenty[katname]=total_w_lista*100/wydatki_total
-    print(procenty[katname])
-mi=None
-mi_p=0
+  #  kategoria=input("podaj kategorie lub  napisz X by wyjść")
+   # if kategoria=="X":
+    #else:
+     #   wydatki[kategoria]=[]
+      #  while y==True:
+       #     cena=input("opodaj ilosc jakie wydałes na owy wydatek albo nacisj Y by zakonaczy program")
+        #    if cena=="Y":
+         #       y=False
+          #  else:
+           #     cena=float(cena)
+            #    wydatki_total+=cena
+             #   wydatki[kategoria].append(cena)
+#for i in wydatki.values():
+#    wydatki_total_sposob+=sum(i)
+#print(wydatki_total_sposob)
+#print(wydatki_total)
+#procenty={}
+#for z,r in wydatki.items():
+#    katname=z
+#    total_w_lista=sum(r)
+#    procenty[katname]=total_w_lista*100/wydatki_total
+#    print(procenty[katname])
+#mi=None
+#mi_p=0
+#
+#for c,p in procenty.items():
+#    if p>mi_p:
+ #       mi_p=p
+  #      mi=c
 
-for c,p in procenty.items():
-    if p>mi_p:
-        mi_p=p
-        mi=c
+#print(f" najwiecje wydajesz na  {mi} to jest {mi_p} %")
 
-print(f" najwiecje wydajesz na  {mi} to jest {mi_p} %")
+
+# for in range
+
+
+#zadanie 1 ładnie zrobione
+celly=input("podaj swój numer telefonu bez spacji jus numer")
+for i in range(10):
+    ilosc=celly.count(str(i))
+    print(f"cyfra {i}  wystepuje {ilosc} razy")
+
+#zadanie 2 ładnie zajebane bo  nie pale się do rat więc spróbuje zrozumieć kod a nie napisac go
+
+# Napisz kalkulator dla kredytu o malejącej racie. Zapytaj użytkownika o:
+# -> Kwotę kredytu
+# -> Oprocentowanie kredytu
+# -> Czas trwania (w latach)
+# -> Koszty początkowe (prowizja itp.)
+# Oblicz jaką łącznie sumę użytkownik odda bankowi i porównaj ją z kapitałem, który otrzyma.
+# Podpowiedź: oblicz wartość każdej miesięcznej raty według wzoru:
+# kapitał spłacany miesięcznie = kwota kredytu / (liczba lat * 12)
+# pozostały kapitał = kwota kredytu - (numer miesiąca od początku - 1) * kapitał spłacany miesięcznie
+# rata = (pozostały kapitał * oprocentowanie / 100) / 12 + kapitał spłacany miesięcznie
+
+capital = int(input("Na jaką kwotę jest kredyt? "))
+interest_rate = float(input("Jakie jest oprocentowanie (%)? "))
+years = int(input("Na ile lat jest kredyt? "))
+initial_fees = int(input("Jakie są koszty początkowe? "))
+
+credit_time_in_months = years * 12
+monthly_paid_capital = capital / credit_time_in_months
+total_paid = initial_fees
+for month_number in range(1, credit_time_in_months + 1):
+    capital_to_be_paid = capital - (month_number - 1) * monthly_paid_capital
+    installment = (capital_to_be_paid * interest_rate / 100) / 12 + monthly_paid_capital
+    total_paid += installment
+    print(f"Rata w miesiącu {month_number} wyniesie {installment:.2f}")
+
+print(f"Zaciągając {capital} na tych warunkach spłacisz z odsetkami {total_paid}")
