@@ -187,10 +187,10 @@
 
 
 #zadanie 1 ładnie zrobione
-celly=input("podaj swój numer telefonu bez spacji jus numer")
-for i in range(10):
-    ilosc=celly.count(str(i))
-    print(f"cyfra {i}  wystepuje {ilosc} razy")
+#celly=input("podaj swój numer telefonu bez spacji jus numer")
+#for i in range(10):
+#    ilosc=celly.count(str(i))
+#    print(f"cyfra {i}  wystepuje {ilosc} razy")
 
 #zadanie 2 ładnie zajebane bo  nie pale się do rat więc spróbuje zrozumieć kod a nie napisac go
 
@@ -205,18 +205,28 @@ for i in range(10):
 # pozostały kapitał = kwota kredytu - (numer miesiąca od początku - 1) * kapitał spłacany miesięcznie
 # rata = (pozostały kapitał * oprocentowanie / 100) / 12 + kapitał spłacany miesięcznie
 
-capital = int(input("Na jaką kwotę jest kredyt? "))
-interest_rate = float(input("Jakie jest oprocentowanie (%)? "))
-years = int(input("Na ile lat jest kredyt? "))
-initial_fees = int(input("Jakie są koszty początkowe? "))
+#capital = int(input("Na jaką kwotę jest kredyt? "))
+#interest_rate = float(input("Jakie jest oprocentowanie (%)? "))
+#years = int(input("Na ile lat jest kredyt? "))
+#initial_fees = int(input("Jakie są koszty początkowe? "))
 
-credit_time_in_months = years * 12
-monthly_paid_capital = capital / credit_time_in_months
-total_paid = initial_fees
-for month_number in range(1, credit_time_in_months + 1):
-    capital_to_be_paid = capital - (month_number - 1) * monthly_paid_capital
-    installment = (capital_to_be_paid * interest_rate / 100) / 12 + monthly_paid_capital
-    total_paid += installment
-    print(f"Rata w miesiącu {month_number} wyniesie {installment:.2f}")
+#credit_time_in_months = years * 12
+#monthly_paid_capital = capital / credit_time_in_months
+#total_paid = initial_fees
+#for month_number in range(1, credit_time_in_months + 1): # +1 bo ofc kochane programowanie
+##    capital_to_be_paid = capital - (month_number - 1) * monthly_paid_capital
+ #   installment = (capital_to_be_paid * interest_rate / 100) / 12 + monthly_paid_capital
+ #   total_paid += installment
+ #   print(f"Rata w miesiącu {month_number} wyniesie {installment:.2f}")
 
-print(f"Zaciągając {capital} na tych warunkach spłacisz z odsetkami {total_paid}")
+#print(f"Zaciągając {capital} na tych warunkach spłacisz z odsetkami {total_paid}")
+
+#brejk i kontiniu wiem jak zrobic to zadanie ale niechche kombinwoac za bradzo
+#dzienciczek={}
+#number_of_failures = 0
+#srednia=0
+#ums=[2,4,6,2,1,6,3,6,4,3,1,9,0]
+#for i in nums:
+#    if i %2 == 0:
+#        continue
+#    print(i)
