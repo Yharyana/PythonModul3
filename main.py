@@ -167,3 +167,18 @@ for i in wydatki.values():
     wydatki_total_sposob+=sum(i)
 print(wydatki_total_sposob)
 print(wydatki_total)
+procenty={}
+for z,r in wydatki.items():
+    katname=z
+    total_w_lista=sum(r)
+    procenty[katname]=total_w_lista*100/wydatki_total
+    print(procenty[katname])
+mi=None
+mi_p=0
+
+for c,p in procenty.items():
+    if p>mi_p:
+        mi_p=p
+        mi=c
+
+print(f" najwiecje wydajesz na  {mi} to jest {mi_p} %")
