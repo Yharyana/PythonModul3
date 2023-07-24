@@ -136,8 +136,16 @@
 #                wydatki[kategoria].append(f"{cena} ")
 #
 #print(wydatki)
+
+
+
+
+
+#ważne zadanie do zrozumienia
 wydatki={}
-x=True#
+wydatki_total=0
+wydatki_total_sposob=0
+x=True
 
 while x==True:
     y=True
@@ -152,10 +160,10 @@ while x==True:
             if cena=="Y":
                 y=False
             else:
-                cena=int(cena)
+                cena=float(cena)
+                wydatki_total+=cena
                 wydatki[kategoria].append(cena)
-srednia=0
-total=0;
-for j in wydatki.values():
-    total+=sum(j)
-print(total)
+for i in wydatki.values():
+    wydatki_total_sposob+=sum(i)
+print(wydatki_total_sposob)
+print(wydatki_total)
